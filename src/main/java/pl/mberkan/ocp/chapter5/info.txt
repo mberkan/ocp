@@ -1,0 +1,18 @@
+New for me:
+- trailing spaces on the end of properties file are not trimmed
+- resource bundle can be Java files
+- priority when looking for bundle files is:
+  - java - requested locale
+  - properties - requested locale
+  - java - requested locale without country
+  - properties - requested locale country
+  - java - default locale
+  - properties - default locale
+  - java - default locale without country
+  - properties - default locale country
+  - java - without locale
+  - properties - without locale
+  - MissingResourceException
+- keys are searched in all files not as above! When requested local is found, then default locale is ignored!
+- when java parses string against numbers it ignores not recognized elements, i.e. characters, so "456abc" -> 456
+

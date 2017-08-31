@@ -1,2 +1,12 @@
 apply plugin: 'java'
 apply plugin: 'idea'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.postgresql/postgresql
+    compile group: 'org.postgresql', name: 'postgresql', version: '9.4-1200-jdbc41'
+}
+
